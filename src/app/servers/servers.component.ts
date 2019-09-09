@@ -9,7 +9,7 @@ export class ServersComponent implements OnInit {
 
   allowNewServer = false;
   serverCreationStatus = 'No server was created!';
-  serverName = '';
+  serverName = 'TestServer';
 
   constructor() {
     setTimeout(() => {
@@ -24,10 +24,12 @@ export class ServersComponent implements OnInit {
     this.serverCreationStatus = 'Server was created!';
   }
 
+  /* commenting this block out as we've switched to two-way binding.
   onUpdateServerName(event: Event) {
     // casting input to type HTML Input Element to enable TS to compile
     // using "as __" suffix instead of <__> prefix to satisfy our linter's rules
-    this.serverName = (event.target as HTMLInputElement).value; 
+    this.serverName = (event.target as HTMLInputElement).value;
   }
+  */
 
 }
