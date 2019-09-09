@@ -9,8 +9,9 @@ export class ServersComponent implements OnInit {
 
   allowNewServer = false;
   serverCreationStatus = 'No server was created!';
+  serverName = '';
 
-  constructor() { 
+  constructor() {
     setTimeout(() => {
       this.allowNewServer = true;
     }, 2000);
@@ -19,8 +20,14 @@ export class ServersComponent implements OnInit {
   ngOnInit() {
   }
 
-  onCreateServer = () => {
+  onCreateServer() {
     this.serverCreationStatus = 'Server was created!';
+  }
+
+  onUpdateServerName(event: Event) {
+    // casting input to type HTML Input Element to enable TS to compile
+    // using "as __" suffix instead of <__> prefix to satisfy our linter's rules
+    this.serverName = (event.target as HTMLInputElement).value; 
   }
 
 }
