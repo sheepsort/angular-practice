@@ -7,8 +7,8 @@ import { ServerComponent } from './server/server.component';
 import { ServersComponent } from './servers/servers.component';
 import { AssignmentComponent } from './assignment/assignment.component';
 import { GameControlComponent } from './assignment/assignment_two/game-control/game-control.component';
-import { OddComponent } from './odd/odd.component';
-import { EvenComponent } from './even/even.component';
+import { OddComponent } from './assignment/assignment_two/odd/odd.component';
+import { EvenComponent } from './assignment/assignment_two/even/even.component';
 
 @NgModule({
   declarations: [
