@@ -1,0 +1,15 @@
+<button class="btn btn-primary" (click)="showPassword()">
+  Display Details
+</button>
+<p *ngIf="passwordDisplay">Secret Password Here</p>
+<div class="container">
+  <div class="ul">
+    <p
+      *ngFor="let click of buttonClicks"
+      [ngStyle]="{ backgroundColor: click >=5 ? 'blue' : 'transparent' }"
+      [ngClass]="{ counter: click >= 5 }"
+    >
+      {{ click }}
+    </p>
+  </div>
+</div>
